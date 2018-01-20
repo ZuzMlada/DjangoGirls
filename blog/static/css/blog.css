@@ -1,0 +1,35 @@
+body {
+  background-color: OldLace;
+}
+
+a {
+    color: #FCA125;
+    font-family: "Lobster";
+
+}
+
+body {
+    padding-left: 15px;
+}
+
+.page_header {
+  background-color: LightSeaGreen;
+  margin-top: 0;
+  font-size: 36pt;
+  padding: 20px 20px 20px 40px;
+  text-decoration: none;
+  font-family: "Lobster"
+}
+
+.sekcie {
+  background-color: DarkSlateGray;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.mensi_header{
+  margin-top: 0;
+  padding: 20px 20px 20px 40px;
+  text-decoration: none;
+  font-family: "Lobster"
+}

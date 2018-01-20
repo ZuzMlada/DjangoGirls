@@ -1,22 +1,31 @@
+{% load staticfiles %}
 <html>
     <head>
       <title>"Cool series to watch"</title>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+      <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     </head>
     <body>
-    <div>
-    <h1>How cool is this</h1>
-    <h2>Such Netflix</h2>
-    <h3>Much python</h3>
+
+    <div class="page_header">
+    <h1>Cool series to watch</h1>
+    </div>
+
+    <div class="mensi_header">
+    <h2>Netflix Series</h2>
+    <h3>List</h3>
     </div>
 
 {% for post in posts %}
 
-    <div>
+    <div class="sekcie">
     <a href="https://djangogirls.org">{{ forloop.revcounter }}. {{ post.title }}</a>
     <p><em>published: {{ post.published_date }}</em></p>
     <p>{{ post.text|linebreaksbr }}</p>
-
     </div>
+
 {% endfor %}
 
     </body>
