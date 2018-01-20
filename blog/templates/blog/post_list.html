@@ -1,19 +1,24 @@
 <html>
     <head>
-      <title>"Zuzka Very Cool Blog"</title>
+      <title>"Cool series to watch"</title>
     </head>
     <body>
+    <div>
     <h1>How cool is this</h1>
-    <h2>Such programming</h2>
+    <h2>Such Netflix</h2>
     <h3>Much python</h3>
-    <p><em>Hi there!</em></p>
-    <p>It works!</p>
-    <a href="https://djangogirls.org">Tu klikni!</a>
+    </div>
 
-    <ul>
-      <li>prvy item</li>
-      <li>druhy item</li>
-    </ul>
+{% for post in posts %}
+
+    <div>
+    <a href="https://djangogirls.org">{{ forloop.revcounter }}. {{ post.title }}</a>
+    <p><em>published: {{ post.published_date }}</em></p>
+    <p>{{ post.text|linebreaksbr }}</p>
+
+    </div>
+{% endfor %}
 
     </body>
+
 </html>
